@@ -1,0 +1,42 @@
+{% extends 'index.html'%}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>standing</title>
+</head>
+<body>
+    <h2>standing</h2>
+    <a href="{% url 'standadd' %}"><button>Enter team</button></a>
+    <table border="1">
+        <thead>
+            <th>#</th>
+            <th>Clubs</th>
+            <th>Played</th>
+            <th>Won</th>
+            <th>Draw</th>
+            <th>Lost</th>
+            <th>Points</th> 
+        </thead>
+
+        {% for x in ts%}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.team_name}}</td>
+            <td>{{x.matches_played}}</td>
+            <td>{{x.wins}}</td>
+            <td>{{x.draws}}</td>
+            <td>{{x.loss}}</td>
+            <td>{{x.points}}</td>
+            <td>
+               <a href="{% url 'standform' x.id%}"><button>update</button></a>
+            </td>
+        </tr>
+        {% endfor%}
+    </table>
+    
+</body>
+</html>
+{% endblock%}

@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFSL</title>
+    
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}" defer></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <!-- jQuery (Required for Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+</head>
+
+<body>
+    {% block content%}
+    
+    <nav>
+
+        <div class="logo">
+            <h1>IFSL</h1>
+            <img src="{% static 'image/logo.png' %}" width="100">
+        </div>
+        
+        <div class="nav-container">
+        <ul>
+            <a href="#home">HOME</a>            
+            <a href="#team">CLUBS</a>
+            <a href="#standing">STANDING</a>
+            <a href="#players">PLAYERS</a>
+            <a href="{% url 'contact'%}">CONTACT</a>
+        </ul>
+        <div class="login">
+            <a href="">login</a>
+            
+            <a href="https://www.facebook.com/IndianSuperLeague/"><i><i class="fa-brands fa-facebook-f"></i></i></a>
+            <a href="https://x.com/IndSuperLeague?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i><i class="fa-brands fa-twitter"></i></i></a>
+            <a href="https://www.linkedin.com/company/indiansuperleague/?originalSubdomain=in"><i><i class="fa-brands fa-linkedin"></i></i></a>
+
+        </div>
+    </div>
+    </nav>
+    
+    <!-- home -->
+    <section id="home">
+        <script src="{% static 'js/slider.js' %}"></script>
+
+        <div class="slider">
+            <div class="slide">
+                <img src="{% static 'image/home1.jpg' %}" alt="">
+                <div class="overlay-text">
+                    <h1>Welcome to Indian Football Super League</h1>
+                    <h4>Join the journey, feel the passion, and support our team!</h4>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="{%static 'image/home.jpg'%}" alt="">
+                <div class="overlay-text">
+                    <h2>"Welcome to the official website of "IFSL", a club built on passion, teamwork, and excellence. With a legacy of determination and success, we strive to push boundaries both on and off the field.</h2>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="{% static 'image/home3.jpg' %}" alt="">
+                <div class="overlay-text">
+                    <p> we aim to uphold the values of sportsmanship, dedication, and unity. Our journey is fueled by the relentless spirit of our players, the guidance of our coaches, and the unwavering support of our fans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- clubs   -->
+    <section id="team">
+        
+        <h2 class="team-head"> Teams</h2>
+        
+        <div class="team-container">
+            <h2 class="team-content">IFSL teams</h2><img src="{% static 'image/logo.png' %}" width="200">
+
+            <div class="team-overview">
+                <h1>IFSL Clubs </h1>
+                <p>Teams are built on hard work, discipline, and a relentless pursuit of victory.The squads that defines their legacy!</p>
+                <button><a href="{% url 'team' %}">overview</a></button>
+            </div>
+        
+        </div>
+            
+    </section>
+    
+
+    <!-- standing -->
+<section id="standing">
+    <div class="standing-container">
+        <h1 class="stand-head">Standing</h1>
+        <p>Get the points table and know where each football team is placed in the IFSL standing for the season.</p>
+        <a href="{% url 'standing' %}"><button>view table</button></a>
+    </div>
+</section>
+
+
+<!-- players -->
+    <section id="players">
+
+        <div class="player-container">
+            <div class="player-box">
+                <div class="player-box-items">
+               <marquee style="width: 30%;" scrollamount = '10'> <h2>Players Stats</h2></marquee>
+                <p>Player's stats is crucial for team selection, match strategy, and transfer market value. Clubs and fans closely monitor player status to understand their availability, performance level, and contributions to the team.</p>
+                <a href="{% url 'player' %}"><button>View players</button></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <section id="footer">
+        <table class="footer-table">
+            <thead>
+                <th>GALLERIES</th>
+                <th>CLUBS</th>
+                <th>SEASON</th>
+                <th>FOLLOW US</th>
+            </thead>
+        <div class="table-datas">
+            <tr>
+                <td>Photos</td>
+                <td>Bengaluru FC</td>
+                <td>Matches</td>
+                <td>
+                    <i><i class="fa-solid fa-envelope"></i></i>
+                    <i><i class="fa-brands fa-facebook-f"></i></i>
+                    <i><i class="fa-brands fa-twitter"></i></i>
+                    <i><i class="fa-brands fa-youtube"></i></i>
+                    <i><i class="fa-brands fa-instagram"></i></i>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Videos</td>
+                <td>Chennaiyin FC</td>
+                <td>Standings</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>East Bengal FC</td>
+                <td>Statistics</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>FC Goa</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Hyderabad FC</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Jamshedpur FC</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Kerala Blasters FC</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>Mohammedan SC</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Mohun Bagan Super Giant</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Mumbai City FC</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>NorthEast United FC</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Odisha FC</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Punjab FC</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+        </div>
+        </table>
+    </section>
+    {% endblock%}
+</body>
+</html>
